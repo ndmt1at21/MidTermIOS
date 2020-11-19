@@ -1,0 +1,6 @@
+module Pods_MidTerm {
+  umbrella header "Pods-MidTerm-umbrella.h"
+
+  export *
+  module * { export * }
+}

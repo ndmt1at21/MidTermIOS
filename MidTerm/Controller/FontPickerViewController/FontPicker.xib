@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FontPicker" customModule="MidTerm" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelLabel" destination="QQ3-6s-dx3" id="m1Y-n9-lpz"/>
+                <outlet property="okLabel" destination="wm6-ho-VrM" id="Y0K-VJ-Wx1"/>
+                <outlet property="parentView" destination="iN0-l3-epB" id="Ysc-eA-Og9"/>
+                <outlet property="pickerView" destination="1mV-Sp-kGA" id="wIi-hK-FNM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WaW-WG-6xT">
+                    <rect key="frame" x="0.0" y="0.0" width="500" height="300"/>
+                    <subviews>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1mV-Sp-kGA">
+                            <rect key="frame" x="0.0" y="0.0" width="500" height="240"/>
+                        </pickerView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mtd-h9-vt9">
+                            <rect key="frame" x="0.0" y="240" width="500" height="60"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQ3-6s-dx3">
+                                    <rect key="frame" x="0.0" y="0.0" width="250" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="97y-RE-D56"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                    <state key="normal" title="Cancel"/>
+                                    <connections>
+                                        <action selector="buttonCancelPressed:" destination="-1" eventType="touchUpInside" id="ryk-Cu-vmR"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wm6-ho-VrM">
+                                    <rect key="frame" x="250" y="0.0" width="250" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="0KF-DP-k7T"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                    <state key="normal" title="OK"/>
+                                    <connections>
+                                        <action selector="buttonOKPressed:" destination="-1" eventType="touchUpInside" id="5WY-q1-RHs"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WaW-WG-6xT" secondAttribute="trailing" id="6zL-Ab-I3t"/>
+                <constraint firstItem="WaW-WG-6xT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="RiU-ae-1Vh"/>
+                <constraint firstItem="WaW-WG-6xT" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="pbF-WF-z6n"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="WaW-WG-6xT" secondAttribute="bottom" id="w1B-Jy-fdi"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="69.53125" y="101.953125"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
