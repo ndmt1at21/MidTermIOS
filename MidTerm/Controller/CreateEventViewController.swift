@@ -10,31 +10,30 @@ import RealmSwift
 
 class CreateEventViewController: UIViewController {
     
+    @IBOutlet weak var eventNameTextField: UITextField!
     @IBOutlet weak var pickerColor: ColorPicker!
     @IBOutlet weak var pickerFont: FontPicker!
     @IBOutlet weak var fontLabel: UILabel!
     @IBOutlet weak var fontSizeLabel: UILabel!
     @IBOutlet weak var colorLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
-    @IBOutlet weak var tableRecord: TableRecord!
+    @IBOutlet weak var guestTableRecord: GuestTableRecord!
     
-    var tableRecordHeader: [String] = ["Name", "Guest", "Table", "Section"]
-    var tableData: [String] = []
+    let eventShow = EventShow()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Delte all in database ----
         pickerFont.delegate = self
         pickerColor.delegate = self
-        tableRecord.delegate = self
-        tableRecord.datasource = self
+        guestTableRecord.dataSource = self
+
+        guestTableRecord.showTableRecord()
         
-        tableRecord.showTableRecord()
-        let nib = UINib(nibName: "TableRecordCell", bundle: .main)
-        tableRecord.register(
-            nib: nib,
-            forCellWithReuseIdentifier: "ReuseableTableRecordCell"
-        )
+        let realm = try! Realm()
+        try! realm.write {
+            realm.delete(realm.objects(EventShow.self))
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -86,6 +85,21 @@ class CreateEventViewController: UIViewController {
         UserDefaults.standard.set(slider.value, forKey: "UserFontSize")
         UserDefaults.standard.set(fontLabel.text, forKey: "UserFontName")
         UserDefaults.standard.set(colorLabel.backgroundColor, forKey: "UserColor")
+        
+        if eventNameTextField.text?.trimmingCharacters(in: .whitespaces).count == 0 {
+            alertError(title: "Error", message: "Event Name cannot empty", toFocus: eventNameTextField, vc: self)
+            return
+        } else if eventShow.guests.count == 0 {
+            alertError(title: "Error", message: "Avent >= 1 guest", toFocus: nil, vc: self)
+            return
+        }
+        
+        eventShow.eventName = eventNameTextField.text!
+        
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(eventShow)
+        }
     }
     
     @IBAction func buttonExitPressed(_ sender: UIButton) {
@@ -116,60 +130,17 @@ extension CreateEventViewController: ColorPickerDelegate {
 // MARK: - AddGuestViewDelegate (get data when added guest infor)
 extension CreateEventViewController: AddGuestViewDelegate {
     func didSavePressed(_ addGuestVC: AddGuestViewController, guestInfo: GuestInfo) {
-        tableData = []
-        
-        let realm = try! Realm()
-        let guests = realm.objects(GuestInfo.self)
-        guests.forEach { (guest) in
-            let guestValues: [String] = [
-                guest.firstName + ", " + guest.lastName,
-                String(guest.nGuest),
-                guest.tableID,
-                guest.sectionID
-            ]
-            tableData.append(contentsOf: guestValues)
-        }
-        
-        DispatchQueue.main.async {
-            self.tableRecord.reloadData()
-        }
+        eventShow.guests.append(guestInfo)
+        guestTableRecord.reloadData()
     }
 }
 
-extension CreateEventViewController: TableRecordDelegate {
-    func ratioBetweenColumns(_ tableRecord: TableRecord) -> [Float] {
-        return [5, 2, 2, 2]
-    }
-}
-
-extension CreateEventViewController: TableRecordDataSource {
-    func tableRecord(_ tableRecord: TableRecord, cellForItemAt coord: CellCoord) -> UICollectionViewCell {
-        let cell = tableRecord.dequeueReusableCell(
-            withReuseIdentifier: "ReuseableTableRecordCell",
-            for: coord
-        ) as! TableRecordCell
-        
-        cell.textLabel.text = tableData[coord.row * 4 + coord.col]
-        return cell
+extension CreateEventViewController: GuestTableRecordDataSource {
+    func guestTableRecord(_ guestTableRecord: GuestTableRecord, guestForRow row: Int) -> GuestInfo {
+        return eventShow.guests[row]
     }
     
-    func tableRecord(_ tableRecord: TableRecord, cellForHeaderAt column: Int) -> UICollectionViewCell {
-        let cell = tableRecord.dequeueReusableCell(
-            withReuseIdentifier: "ReuseableTableRecordCell",
-            for: CellCoord(col: column, row: 0)
-        ) as! TableRecordCell
-        
-        cell.textLabel.text = tableRecordHeader[column]
-        cell.textLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        return cell
-    }
-    
-    func numberItems(_ tableRecord: TableRecord) -> Int {
-        print(tableData)
-        return tableData.count
-    }
-    
-    func numberOfColumns(_ tableRecord: TableRecord) -> Int {
-        return 4
+    func numberOfRows(_ guestTableRecord: GuestTableRecord) -> Int {
+        return eventShow.guests.count
     }
 }

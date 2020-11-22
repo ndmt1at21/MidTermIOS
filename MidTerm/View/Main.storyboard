@@ -616,10 +616,6 @@ last name initial</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RPj-xY-Lbe" customClass="TableRecord" customModule="MidTerm" customModuleProvider="target">
-                                <rect key="frame" x="20" y="514" width="768" height="410"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gmu-9c-8JA">
                                 <rect key="frame" x="30" y="944" width="110" height="50"/>
                                 <subviews>
@@ -804,42 +800,47 @@ last name initial</string>
                                 <rect key="frame" x="40" y="590" width="728" height="256"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7y-ns-CwV" customClass="GuestTableRecord" customModule="MidTerm" customModuleProvider="target">
+                                <rect key="frame" x="20" y="514" width="728" height="410"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zlx-cK-xbw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Gmu-9c-8JA" firstAttribute="top" secondItem="RPj-xY-Lbe" secondAttribute="bottom" constant="20" id="6Ar-SE-Bsy"/>
                             <constraint firstItem="zlx-cK-xbw" firstAttribute="trailing" secondItem="abB-rV-YL0" secondAttribute="trailing" id="7w0-gl-Wpp"/>
-                            <constraint firstItem="RPj-xY-Lbe" firstAttribute="top" secondItem="d1M-ax-IMd" secondAttribute="bottom" constant="20" id="B4o-IQ-44A"/>
-                            <constraint firstItem="RPj-xY-Lbe" firstAttribute="trailing" secondItem="zlx-cK-xbw" secondAttribute="trailing" constant="20" id="DTT-eT-dzw"/>
                             <constraint firstItem="d1M-ax-IMd" firstAttribute="leading" secondItem="zlx-cK-xbw" secondAttribute="leading" id="FQG-RI-EfJ"/>
                             <constraint firstItem="zlx-cK-xbw" firstAttribute="trailing" secondItem="d1M-ax-IMd" secondAttribute="trailing" id="Ilj-FN-47b"/>
                             <constraint firstItem="osN-h7-hgg" firstAttribute="centerX" secondItem="DTV-ad-0O3" secondAttribute="centerX" id="J22-so-GiH"/>
+                            <constraint firstItem="h7y-ns-CwV" firstAttribute="leading" secondItem="zlx-cK-xbw" secondAttribute="leading" constant="20" id="LXE-Yo-XYW"/>
                             <constraint firstItem="Gmu-9c-8JA" firstAttribute="leading" secondItem="zlx-cK-xbw" secondAttribute="leading" constant="30" id="Ned-Yp-f5a"/>
+                            <constraint firstItem="h7y-ns-CwV" firstAttribute="top" secondItem="Luv-2r-yNp" secondAttribute="bottom" id="Nwc-yZ-6Rh"/>
+                            <constraint firstItem="h7y-ns-CwV" firstAttribute="top" secondItem="d1M-ax-IMd" secondAttribute="bottom" constant="20" id="P5d-XT-heH"/>
                             <constraint firstItem="d1M-ax-IMd" firstAttribute="trailing" secondItem="zlx-cK-xbw" secondAttribute="trailing" id="QqM-w1-wVD"/>
                             <constraint firstItem="d1M-ax-IMd" firstAttribute="leading" secondItem="zlx-cK-xbw" secondAttribute="leading" id="TLa-X4-i9I"/>
                             <constraint firstItem="zlx-cK-xbw" firstAttribute="bottom" secondItem="Gmu-9c-8JA" secondAttribute="bottom" constant="30" id="WYJ-N2-oRv"/>
                             <constraint firstItem="abB-rV-YL0" firstAttribute="leading" secondItem="zlx-cK-xbw" secondAttribute="leading" id="ZGs-bh-xEm"/>
                             <constraint firstItem="zlx-cK-xbw" firstAttribute="trailing" secondItem="Ve3-1B-x6d" secondAttribute="trailing" constant="70" id="Zvq-VG-3of"/>
                             <constraint firstItem="abB-rV-YL0" firstAttribute="top" secondItem="osN-h7-hgg" secondAttribute="bottom" constant="10" id="am6-Lt-bbB"/>
+                            <constraint firstItem="Gmu-9c-8JA" firstAttribute="top" secondItem="h7y-ns-CwV" secondAttribute="bottom" constant="20" id="cBu-NH-Elt"/>
                             <constraint firstItem="Ve3-1B-x6d" firstAttribute="leading" secondItem="zlx-cK-xbw" secondAttribute="leading" constant="70" id="cVL-Wl-n45"/>
+                            <constraint firstItem="zlx-cK-xbw" firstAttribute="trailing" secondItem="h7y-ns-CwV" secondAttribute="trailing" constant="20" id="dNi-NW-68m"/>
                             <constraint firstItem="zlx-cK-xbw" firstAttribute="trailing" secondItem="Luv-2r-yNp" secondAttribute="trailing" constant="20" id="eXS-04-gPd"/>
-                            <constraint firstItem="RPj-xY-Lbe" firstAttribute="leading" secondItem="zlx-cK-xbw" secondAttribute="leading" constant="20" id="gvh-FK-yh7"/>
                             <constraint firstItem="d1M-ax-IMd" firstAttribute="top" secondItem="Ve3-1B-x6d" secondAttribute="bottom" constant="50" id="hd1-NN-dtB"/>
                             <constraint firstItem="Ve3-1B-x6d" firstAttribute="top" secondItem="abB-rV-YL0" secondAttribute="bottom" constant="30" id="j7p-gQ-7Cv"/>
-                            <constraint firstItem="RPj-xY-Lbe" firstAttribute="top" secondItem="Luv-2r-yNp" secondAttribute="bottom" id="jQG-H2-Leb"/>
                             <constraint firstItem="osN-h7-hgg" firstAttribute="top" secondItem="zlx-cK-xbw" secondAttribute="top" constant="30" id="sTe-2P-IBl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="K6O-Xb-Te2"/>
                     <connections>
                         <outlet property="colorLabel" destination="pAK-1X-WEJ" id="F8r-wX-0HK"/>
+                        <outlet property="eventNameTextField" destination="Q3S-7E-je4" id="UHq-F0-wYv"/>
                         <outlet property="fontLabel" destination="9bA-1S-Scv" id="c05-Q2-gKr"/>
                         <outlet property="fontSizeLabel" destination="Jjn-8b-2Gf" id="Uns-tZ-7dw"/>
+                        <outlet property="guestTableRecord" destination="h7y-ns-CwV" id="HP5-Ob-Cbm"/>
                         <outlet property="pickerColor" destination="IEo-S4-rxg" id="fol-55-XtX"/>
                         <outlet property="pickerFont" destination="RB5-zY-1u0" id="QVz-lb-g2E"/>
                         <outlet property="slider" destination="3uz-9P-tmp" id="MgZ-h3-gQG"/>
-                        <outlet property="tableRecord" destination="RPj-xY-Lbe" id="0Hj-RY-186"/>
                         <segue destination="jGs-ea-XBG" kind="show" identifier="CreateEventToAddGuest" id="lMY-RY-vb6"/>
                     </connections>
                 </viewController>

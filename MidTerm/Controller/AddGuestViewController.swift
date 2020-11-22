@@ -56,10 +56,6 @@ class AddGuestViewController: UIViewController {
         guestInfor.tableID = tableTextField.text!
         guestInfor.sectionID = sectionTextField.text!
         
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(guestInfor)
-        }
         delegate?.didSavePressed(self, guestInfo: guestInfor)
         print(Realm.Configuration.defaultConfiguration.fileURL)
         navigationController?.popViewController(animated: true)
@@ -88,21 +84,5 @@ extension AddGuestViewController: UITextFieldDelegate {
                 )
             }
         }
-    }
-    
-    func alertError(title: String, message: String, toFocus: UITextField, vc: UIViewController) {
-        let alert = UIAlertController(
-            title: title,
-            message: message,
-            preferredStyle: .alert
-        )
-        
-        let action = UIAlertAction(
-            title: "OK",
-            style: .default) { _ in
-            toFocus.becomeFirstResponder()
-        }
-        alert.addAction(action)
-        vc.present(alert, animated: true, completion: nil)
     }
 }

@@ -150,3 +150,19 @@ func getUserSetting() -> (fontName: UIFont, fontColor: UIColor) {
     let font = UIFont(name: fontName, size: CGFloat(fontSize)) ?? UIFont.systemFont(ofSize: fontSize)
     return (font, fontColor)
 }
+
+func alertError(title: String, message: String, toFocus: UITextField?, vc: UIViewController) {
+    let alert = UIAlertController(
+        title: title,
+        message: message,
+        preferredStyle: .alert
+    )
+    
+    let action = UIAlertAction(
+        title: "OK",
+        style: .default) { _ in
+        toFocus?.becomeFirstResponder()
+    }
+    alert.addAction(action)
+    vc.present(alert, animated: true, completion: nil)
+}
