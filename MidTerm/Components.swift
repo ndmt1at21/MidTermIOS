@@ -51,6 +51,18 @@ extension UIColor {
 
         self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
+    
+    var rgbComponent: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+        var r: CGFloat = 0
+        var g: CGFloat = 0
+        var b: CGFloat = 0
+        var a: CGFloat = 0
+        
+        if getRed(&r, green: &g, blue: &b, alpha: &a) {
+            return (r, g, b, a)
+        }
+        return (0, 0, 0, 0)
+    }
 }
 
 
@@ -71,4 +83,70 @@ extension CALayer {
         shadowRadius = radius
         shadowColor = color
     }
+}
+
+
+extension UIView {
+    func addGradientLayer(colors: [CGColor], startPoint: CGPoint, endPoint: CGPoint) {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.bounds
+        gradientLayer.colors = colors
+        gradientLayer.startPoint = startPoint
+        gradientLayer.endPoint = endPoint
+        
+        self.layer.addSublayer(gradientLayer)
+    }
+}
+
+extension UILabel {
+    func outline(strokeWidth: Float, strokeColor: UIColor) {
+        let strokeAttribute: [NSAttributedString.Key: Any] = [
+            NSAttributedString.Key.strokeColor: strokeColor,
+            NSAttributedString.Key.strokeWidth: strokeWidth,
+        ]
+        
+        if let currentAttribute = self.attributedText {
+            let outlineAttribute = NSMutableAttributedString(attributedString: currentAttribute)
+            
+            outlineAttribute.addAttributes(
+                strokeAttribute,
+                range: NSRange(location: 0, length: self.text?.count ?? 0)
+            )
+            self.attributedText = outlineAttribute
+        }
+       
+    }
+}
+
+extension UserDefaults {
+    func color(forKey key: String) -> UIColor? {
+        guard let colorData = data(forKey: key) else { return nil }
+
+        do {
+            return try NSKeyedUnarchiver.unarchivedObject(ofClass: UIColor.self, from: colorData)
+        } catch let error {
+            print("error: \(error.localizedDescription)")
+            return nil
+        }
+
+    }
+
+    func set(_ value: UIColor?, forKey key: String) {
+        guard let color = value else { return }
+        do {
+            let data = try NSKeyedArchiver.archivedData(withRootObject: color, requiringSecureCoding: false)
+            set(data, forKey: key)
+        } catch let error {
+            print("error: \(error.localizedDescription)")
+        }
+    }
+}
+
+func getUserSetting() -> (fontName: UIFont, fontColor: UIColor) {
+    let fontName = UserDefaults.standard.string(forKey: "UserFontName") ?? "Arial"
+    let fontSize = CGFloat(UserDefaults.standard.float(forKey: "UserFontSize"))
+    let fontColor = UserDefaults.standard.color(forKey: "UserColor") ?? UIColor.black
+    
+    let font = UIFont(name: fontName, size: CGFloat(fontSize)) ?? UIFont.systemFont(ofSize: fontSize)
+    return (font, fontColor)
 }

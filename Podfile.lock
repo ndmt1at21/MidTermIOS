@@ -1,16 +1,20 @@
 PODS:
+  - IQKeyboardManagerSwift (6.5.6)
   - SCLAlertView (0.8)
 
 DEPENDENCIES:
+  - IQKeyboardManagerSwift
   - SCLAlertView
 
 SPEC REPOS:
   trunk:
+    - IQKeyboardManagerSwift
     - SCLAlertView
 
 SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
 
-PODFILE CHECKSUM: 24aa951bcd95b9c117d787fa7a7c94d5222750e3
+PODFILE CHECKSUM: 44dc63c481b6df0ff354642ed8f31bc454f0c203
 
 COCOAPODS: 1.10.0

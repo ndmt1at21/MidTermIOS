@@ -73,6 +73,16 @@ extension FontPicker: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 40
     }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        
+        let label = UILabel()
+        label.text = allFonts[row]
+        label.font = UIFont(name: allFonts[row], size: 25)
+        label.textAlignment = .center
+        
+        return label
+    }
 }
 
 // MARK: - Get All Font Names

@@ -37,11 +37,13 @@ class ColorPicker: UIView {
         collectionView.delegate = self
         collectionView.dataSource = self
         colors = getColorData()
+        
         // Setup UI
         parentView.layer.cornerRadius = 20
-        collectionView.backgroundColor = UIColor("#eeeeee", 1)
         parentView.backgroundColor = UIColor("#eeeeee", 1)
         parentView.layer.shadow(0, 0, 15, UIColor("#000", 0.3).cgColor)
+        
+        collectionView.backgroundColor = UIColor("#eeeeee", 1)
         closeButton.layer.cornerRadius = closeButton.frame.height / 2
     }
     

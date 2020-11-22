@@ -7,28 +7,28 @@
 
 import UIKit
 
-class GuessViewController: UIViewController {
+class GuessWelcomeViewController: UIViewController {
+    
+    @IBOutlet weak var guessNameLabel: UILabel!
+    @IBOutlet weak var guessImg: UIImageView!
+    @IBOutlet weak var findTableButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupUI()
     }
     
-    func initBtn(_ btn: UIButton!) {
-        btn.titleLabel?.textAlignment = .center
-        btn.layer.cornerRadius = 10
-        btn.layer.borderColor = UIColor("#0000ff", 1).cgColor
-        btn.layer.borderWidth = 1
+    func setupUI() {
+        let (font, userColor) = getUserSetting()
+        UILabel.appearance().font = font
+        UILabel.appearance().textColor = userColor
+        UIButton.appearance().titleLabel?.font = font
+        UIButton.appearance().tintColor = userColor
+        UIButton.appearance().setTitleColor(userColor, for: .normal)
+        
+        guessNameLabel.font = font.withSize(font.pointSize + 70)
+        findTableButton.titleLabel?.font = font.withSize(font.pointSize + 30)
+        findTableButton.titleLabel?.textAlignment = .center
+        findTableButton.layer.cornerRadius = findTableButton.frame.height / 2
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

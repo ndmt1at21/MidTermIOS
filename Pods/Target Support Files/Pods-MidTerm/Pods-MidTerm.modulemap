@@ -1,4 +1,4 @@
-module Pods_MidTerm {
+framework module Pods_MidTerm {
   umbrella header "Pods-MidTerm-umbrella.h"
 
   export *

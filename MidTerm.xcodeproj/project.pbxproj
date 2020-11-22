@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		132301AB7FB18A2112F8798E /* Pods_MidTerm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A4DAFA5EAA3C8FC7828D7E /* Pods_MidTerm.framework */; };
+		5A5F349925679EDC009F8845 /* GuestDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5F349825679EDC009F8845 /* GuestDetailViewController.swift */; };
+		5A5F34A52567C404009F8845 /* GuestInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5F34A42567C404009F8845 /* GuestInfo.swift */; };
+		5A762C9C2566B76B00FE9B58 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 5A762C9B2566B76B00FE9B58 /* Realm */; };
+		5A762C9E2566B76B00FE9B58 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5A762C9D2566B76B00FE9B58 /* RealmSwift */; };
 		5A7DC80325652D9D007EB493 /* FontPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7DC80225652D9D007EB493 /* FontPickerViewController.swift */; };
 		5A7DC80625652DB8007EB493 /* FontPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A7DC80525652DB8007EB493 /* FontPicker.xib */; };
 		5AAA5B6325636C940004845B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAA5B6225636C940004845B /* AppDelegate.swift */; };
@@ -14,6 +19,13 @@
 		5AAA5B6725636C940004845B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAA5B6625636C940004845B /* WelcomeViewController.swift */; };
 		5AAA5B6C25636C950004845B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AAA5B6B25636C950004845B /* Assets.xcassets */; };
 		5AAA5B6F25636C950004845B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AAA5B6D25636C950004845B /* LaunchScreen.storyboard */; };
+		5ADE27582568A05900D74762 /* TableRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE27572568A05900D74762 /* TableRecord.swift */; };
+		5ADE275B2568A06600D74762 /* TableRecord.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ADE275A2568A06600D74762 /* TableRecord.xib */; };
+		5ADE276A2568E9A900D74762 /* TableRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE27682568E9A900D74762 /* TableRecordCell.swift */; };
+		5ADE276B2568E9A900D74762 /* TableRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ADE27692568E9A900D74762 /* TableRecordCell.xib */; };
+		5AE262B425674E3F0084717A /* GuessLastNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE262B325674E3F0084717A /* GuessLastNameViewController.swift */; };
+		5AE262B82567977E0084717A /* AddGuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE262B72567977E0084717A /* AddGuestViewController.swift */; };
+		5AE262BC25679AD50084717A /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE262BB25679AD50084717A /* SearchResultViewController.swift */; };
 		5AE4C084256637E9004F0EFC /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE4C083256637E9004F0EFC /* ColorPicker.swift */; };
 		5AE4C087256637F9004F0EFC /* ColorPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AE4C086256637F9004F0EFC /* ColorPicker.xib */; };
 		5AE4C08B25663C5C004F0EFC /* ColorPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE4C08925663C5C004F0EFC /* ColorPickerCell.swift */; };
@@ -24,13 +36,13 @@
 		5AFF40452563CC2100EB9113 /* GuessWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF40442563CC2100EB9113 /* GuessWelcomeViewController.swift */; };
 		5AFF40482563CC7300EB9113 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF40472563CC7300EB9113 /* AdminViewController.swift */; };
 		5AFF404B2563D9D500EB9113 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF404A2563D9D500EB9113 /* CreateEventViewController.swift */; };
-		CF7CC4E7541599A646D8C70A /* libPods-MidTerm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B12D9E1328DAF2303C3610 /* libPods-MidTerm.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		223D5FD838D6D7D1B3BC790B /* Pods-MidTerm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MidTerm.release.xcconfig"; path = "Target Support Files/Pods-MidTerm/Pods-MidTerm.release.xcconfig"; sourceTree = "<group>"; };
-		27B12D9E1328DAF2303C3610 /* libPods-MidTerm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MidTerm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E6EF7B5943B06B848FBAB13 /* Pods-MidTerm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MidTerm.debug.xcconfig"; path = "Target Support Files/Pods-MidTerm/Pods-MidTerm.debug.xcconfig"; sourceTree = "<group>"; };
+		5A5F349825679EDC009F8845 /* GuestDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDetailViewController.swift; sourceTree = "<group>"; };
+		5A5F34A42567C404009F8845 /* GuestInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestInfo.swift; sourceTree = "<group>"; };
 		5A7DC80225652D9D007EB493 /* FontPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontPickerViewController.swift; sourceTree = "<group>"; };
 		5A7DC80525652DB8007EB493 /* FontPicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FontPicker.xib; sourceTree = "<group>"; };
 		5AAA5B5F25636C940004845B /* MidTerm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MidTerm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +52,13 @@
 		5AAA5B6B25636C950004845B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AAA5B6E25636C950004845B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AAA5B7025636C950004845B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5ADE27572568A05900D74762 /* TableRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRecord.swift; sourceTree = "<group>"; };
+		5ADE275A2568A06600D74762 /* TableRecord.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableRecord.xib; sourceTree = "<group>"; };
+		5ADE27682568E9A900D74762 /* TableRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRecordCell.swift; sourceTree = "<group>"; };
+		5ADE27692568E9A900D74762 /* TableRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableRecordCell.xib; sourceTree = "<group>"; };
+		5AE262B325674E3F0084717A /* GuessLastNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessLastNameViewController.swift; sourceTree = "<group>"; };
+		5AE262B72567977E0084717A /* AddGuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGuestViewController.swift; sourceTree = "<group>"; };
+		5AE262BB25679AD50084717A /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		5AE4C083256637E9004F0EFC /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 		5AE4C086256637F9004F0EFC /* ColorPicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorPicker.xib; sourceTree = "<group>"; };
 		5AE4C08925663C5C004F0EFC /* ColorPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerCell.swift; sourceTree = "<group>"; };
@@ -50,6 +69,7 @@
 		5AFF40442563CC2100EB9113 /* GuessWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessWelcomeViewController.swift; sourceTree = "<group>"; };
 		5AFF40472563CC7300EB9113 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		5AFF404A2563D9D500EB9113 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		66A4DAFA5EAA3C8FC7828D7E /* Pods_MidTerm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MidTerm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +77,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF7CC4E7541599A646D8C70A /* libPods-MidTerm.a in Frameworks */,
+				5A762C9E2566B76B00FE9B58 /* RealmSwift in Frameworks */,
+				5A762C9C2566B76B00FE9B58 /* Realm in Frameworks */,
+				132301AB7FB18A2112F8798E /* Pods_MidTerm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +89,7 @@
 		58F66ECDD532DA1685A29AF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				27B12D9E1328DAF2303C3610 /* libPods-MidTerm.a */,
+				66A4DAFA5EAA3C8FC7828D7E /* Pods_MidTerm.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -90,6 +112,17 @@
 				5AE4C08A25663C5C004F0EFC /* ColorPickerCell.xib */,
 			);
 			path = ColorPickerViewController;
+			sourceTree = "<group>";
+		};
+		5A67FDD125681F62009AA906 /* TableRecord */ = {
+			isa = PBXGroup;
+			children = (
+				5ADE27572568A05900D74762 /* TableRecord.swift */,
+				5ADE275A2568A06600D74762 /* TableRecord.xib */,
+				5ADE27682568E9A900D74762 /* TableRecordCell.swift */,
+				5ADE27692568E9A900D74762 /* TableRecordCell.xib */,
+			);
+			path = TableRecord;
 			sourceTree = "<group>";
 		};
 		5AAA5B5625636C940004845B = {
@@ -115,6 +148,7 @@
 			children = (
 				5AAA5B6225636C940004845B /* AppDelegate.swift */,
 				5AAA5B6425636C940004845B /* SceneDelegate.swift */,
+				5AE4C08E2566A85B004F0EFC /* Model */,
 				5AFF403D25639A1E00EB9113 /* Controller */,
 				5AAA5B8725636FA90004845B /* View */,
 				5AAA5B6B25636C950004845B /* Assets.xcassets */,
@@ -133,14 +167,27 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5AE4C08E2566A85B004F0EFC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5A5F34A42567C404009F8845 /* GuestInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5AFF403D25639A1E00EB9113 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				5AAA5B6625636C940004845B /* WelcomeViewController.swift */,
 				5AFF40312563996900EB9113 /* LoginViewController.swift */,
-				5AFF40442563CC2100EB9113 /* GuessWelcomeViewController.swift */,
 				5AFF40472563CC7300EB9113 /* AdminViewController.swift */,
 				5AFF404A2563D9D500EB9113 /* CreateEventViewController.swift */,
+				5AE262B72567977E0084717A /* AddGuestViewController.swift */,
+				5AE262BB25679AD50084717A /* SearchResultViewController.swift */,
+				5AFF40442563CC2100EB9113 /* GuessWelcomeViewController.swift */,
+				5AE262B325674E3F0084717A /* GuessLastNameViewController.swift */,
+				5A5F349825679EDC009F8845 /* GuestDetailViewController.swift */,
+				5A67FDD125681F62009AA906 /* TableRecord */,
 				5A15924A256600DE00857FD2 /* ColorPickerViewController */,
 				5A1592472566008D00857FD2 /* FontPickerViewController */,
 			);
@@ -167,12 +214,17 @@
 				5AAA5B5B25636C940004845B /* Sources */,
 				5AAA5B5C25636C940004845B /* Frameworks */,
 				5AAA5B5D25636C940004845B /* Resources */,
+				5CA4D2F366F07BBD756DB30A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MidTerm;
+			packageProductDependencies = (
+				5A762C9B2566B76B00FE9B58 /* Realm */,
+				5A762C9D2566B76B00FE9B58 /* RealmSwift */,
+			);
 			productName = MidTerm;
 			productReference = 5AAA5B5F25636C940004845B /* MidTerm.app */;
 			productType = "com.apple.product-type.application";
@@ -200,6 +252,9 @@
 				Base,
 			);
 			mainGroup = 5AAA5B5625636C940004845B;
+			packageReferences = (
+				5A762C9A2566B76B00FE9B58 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 5AAA5B6025636C940004845B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -217,8 +272,10 @@
 				5A7DC80625652DB8007EB493 /* FontPicker.xib in Resources */,
 				5AAA5B6F25636C950004845B /* LaunchScreen.storyboard in Resources */,
 				5AAA5B6C25636C950004845B /* Assets.xcassets in Resources */,
+				5ADE276B2568E9A900D74762 /* TableRecordCell.xib in Resources */,
 				5AE4C087256637F9004F0EFC /* ColorPicker.xib in Resources */,
 				5AFF403B256399E000EB9113 /* Main.storyboard in Resources */,
+				5ADE275B2568A06600D74762 /* TableRecord.xib in Resources */,
 				5AE4C08C25663C5C004F0EFC /* ColorPickerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,6 +283,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5CA4D2F366F07BBD756DB30A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MidTerm/Pods-MidTerm-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MidTerm/Pods-MidTerm-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MidTerm/Pods-MidTerm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D0006AEABB56B548C9B9AC91 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,11 +332,18 @@
 				5AFF40452563CC2100EB9113 /* GuessWelcomeViewController.swift in Sources */,
 				5AFF40322563996900EB9113 /* LoginViewController.swift in Sources */,
 				5AAA5B6725636C940004845B /* WelcomeViewController.swift in Sources */,
+				5A5F34A52567C404009F8845 /* GuestInfo.swift in Sources */,
 				5AE4C08B25663C5C004F0EFC /* ColorPickerCell.swift in Sources */,
+				5A5F349925679EDC009F8845 /* GuestDetailViewController.swift in Sources */,
 				5AFF404125639CD100EB9113 /* Components.swift in Sources */,
+				5AE262B82567977E0084717A /* AddGuestViewController.swift in Sources */,
 				5AFF40482563CC7300EB9113 /* AdminViewController.swift in Sources */,
+				5AE262BC25679AD50084717A /* SearchResultViewController.swift in Sources */,
 				5AAA5B6325636C940004845B /* AppDelegate.swift in Sources */,
+				5ADE27582568A05900D74762 /* TableRecord.swift in Sources */,
 				5AAA5B6525636C940004845B /* SceneDelegate.swift in Sources */,
+				5ADE276A2568E9A900D74762 /* TableRecordCell.swift in Sources */,
+				5AE262B425674E3F0084717A /* GuessLastNameViewController.swift in Sources */,
 				5AE4C084256637E9004F0EFC /* ColorPicker.swift in Sources */,
 				5AFF404B2563D9D500EB9113 /* CreateEventViewController.swift in Sources */,
 				5A7DC80325652D9D007EB493 /* FontPickerViewController.swift in Sources */,
@@ -459,6 +540,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5A762C9A2566B76B00FE9B58 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5A762C9B2566B76B00FE9B58 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A762C9A2566B76B00FE9B58 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		5A762C9D2566B76B00FE9B58 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A762C9A2566B76B00FE9B58 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5AAA5B5725636C940004845B /* Project object */;
 }

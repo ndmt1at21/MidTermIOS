@@ -15,11 +15,23 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
+    }
+    
+    private func setupUI() {
         usernameTextField.cornerRadiusAndShadow()
         passwordTextField.cornerRadiusAndShadow()
         loginButton.layer.cornerRadius = loginButton.frame.height / 4;
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
+        
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
     }
 }
