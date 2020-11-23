@@ -34,7 +34,7 @@
                                         </constraints>
                                         <state key="normal" image="ic-customer"/>
                                         <connections>
-                                            <segue destination="IwY-PD-iXS" kind="show" id="nQN-df-3ey"/>
+                                            <segue destination="IwY-PD-iXS" kind="show" identifier="WelcomeToGuest" id="nQN-df-3ey"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWE-2v-Hw5">
@@ -45,7 +45,7 @@
                                         </constraints>
                                         <state key="normal" image="ic-admin"/>
                                         <connections>
-                                            <segue destination="iOm-3X-ISb" kind="show" id="Rcd-bF-P36"/>
+                                            <segue destination="iOm-3X-ISb" kind="show" identifier="MainWelcomeToAdmin" id="Rcd-bF-P36"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -614,7 +614,7 @@ last name initial</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISPLAY RECORD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1M-ax-IMd">
-                                <rect key="frame" x="0.0" y="452" width="768" height="42"/>
+                                <rect key="frame" x="0.0" y="468" width="768" height="42"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -647,22 +647,25 @@ last name initial</string>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Ve3-1B-x6d">
-                                <rect key="frame" x="70" y="244" width="628" height="158"/>
+                                <rect key="frame" x="70" y="244" width="628" height="174"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Gzo-Qj-XVL">
-                                        <rect key="frame" x="0.0" y="0.0" width="628" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="628" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7h6-Yb-Phn">
-                                                <rect key="frame" x="0.0" y="0.0" width="111" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="111" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q3S-7E-je4">
-                                                <rect key="frame" x="131" y="0.0" width="497" height="34"/>
-                                                <color key="backgroundColor" red="0.78240047089999998" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q3S-7E-je4">
+                                                <rect key="frame" x="131" y="0.0" width="497" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="8mj-Z4-hEk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -670,7 +673,7 @@ last name initial</string>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XlO-16-16a">
-                                        <rect key="frame" x="16.5" y="64" width="611.5" height="94"/>
+                                        <rect key="frame" x="16.5" y="80" width="611.5" height="94"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bP5-dq-wvA">
                                                 <rect key="frame" x="0.0" y="1" width="96.5" height="92"/>
@@ -784,7 +787,7 @@ last name initial</string>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Luv-2r-yNp">
-                                <rect key="frame" x="698" y="464" width="50" height="50"/>
+                                <rect key="frame" x="698" y="480" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="JjE-to-oAx"/>
                                     <constraint firstAttribute="height" constant="50" id="RCu-7g-1SU"/>
@@ -804,7 +807,7 @@ last name initial</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7y-ns-CwV" customClass="GuestTableRecord" customModule="MidTerm" customModuleProvider="target">
-                                <rect key="frame" x="20" y="514" width="728" height="410"/>
+                                <rect key="frame" x="20" y="530" width="728" height="394"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
@@ -923,18 +926,18 @@ last name initial</string>
                                                     <constraint firstAttribute="height" constant="50" id="pkr-VC-cA0"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kFy-7i-E5N">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kFy-7i-E5N">
                                                 <rect key="frame" x="0.0" y="74" width="478" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="t4Z-ge-O1R"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits" textContentType="additional-name"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="additional-name"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sSK-7w-cBP">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sSK-7w-cBP">
                                                 <rect key="frame" x="0.0" y="148" width="478" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -943,23 +946,23 @@ last name initial</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xR6-P9-Kd8">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xR6-P9-Kd8">
                                                 <rect key="frame" x="0.0" y="222" width="478" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="n8x-WM-Mwj"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UzV-Pd-DhF">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UzV-Pd-DhF">
                                                 <rect key="frame" x="0.0" y="296" width="478" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="tRW-ng-9qE"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1254,7 +1257,7 @@ last name initial</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ku-LT-Bie">
-                                <rect key="frame" x="40" y="915" width="688" height="3"/>
+                                <rect key="frame" x="40" y="921" width="688" height="3"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="3" id="ac0-Vh-L8k"/>
@@ -1272,6 +1275,7 @@ last name initial</string>
                             <constraint firstItem="o38-wS-SKi" firstAttribute="bottom" secondItem="sUB-Pk-bEC" secondAttribute="bottom" constant="20" id="GTo-of-UFv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2Ku-LT-Bie" secondAttribute="trailing" constant="20" id="H1U-du-xKX"/>
                             <constraint firstItem="uiw-zJ-9dm" firstAttribute="leading" secondItem="o38-wS-SKi" secondAttribute="leading" constant="30" id="IIj-TG-S1C"/>
+                            <constraint firstItem="sUB-Pk-bEC" firstAttribute="top" secondItem="2Ku-LT-Bie" secondAttribute="bottom" constant="30" id="KR5-xy-jdi"/>
                             <constraint firstItem="o38-wS-SKi" firstAttribute="trailing" secondItem="sUB-Pk-bEC" secondAttribute="trailing" constant="20" id="NEW-g0-mm8"/>
                             <constraint firstItem="KDn-A6-acu" firstAttribute="leading" secondItem="o38-wS-SKi" secondAttribute="leading" constant="50" id="QBE-Ml-L8H"/>
                             <constraint firstItem="KDn-A6-acu" firstAttribute="top" secondItem="dmB-Ua-WkX" secondAttribute="bottom" constant="30" id="QDU-xU-r1e"/>
@@ -1281,7 +1285,6 @@ last name initial</string>
                             <constraint firstItem="o38-wS-SKi" firstAttribute="trailing" secondItem="uiw-zJ-9dm" secondAttribute="trailing" constant="30" id="jOU-Wh-FsS"/>
                             <constraint firstItem="dmB-Ua-WkX" firstAttribute="centerX" secondItem="COq-iZ-rnu" secondAttribute="centerX" id="kID-7V-u48"/>
                             <constraint firstItem="DfO-nq-zX8" firstAttribute="top" secondItem="ZIO-dk-pmk" secondAttribute="bottom" constant="20" id="lMe-GV-Dfk"/>
-                            <constraint firstItem="2Ku-LT-Bie" firstAttribute="top" secondItem="DfO-nq-zX8" secondAttribute="bottom" constant="30" id="m9e-NB-K7d"/>
                             <constraint firstItem="ZIO-dk-pmk" firstAttribute="leading" secondItem="o38-wS-SKi" secondAttribute="leading" constant="30" id="nCI-08-Cqw"/>
                             <constraint firstItem="ZIO-dk-pmk" firstAttribute="top" secondItem="uiw-zJ-9dm" secondAttribute="bottom" constant="20" id="sK1-hZ-o3r"/>
                         </constraints>

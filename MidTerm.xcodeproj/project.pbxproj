@@ -36,6 +36,7 @@
 		5AFC2555256B6E210090DBBA /* WhoseSameTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC2554256B6E210090DBBA /* WhoseSameTableCell.swift */; };
 		5AFC255B256B9F2B0090DBBA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC255A256B9F2B0090DBBA /* User.swift */; };
 		5AFC255F256BA3320090DBBA /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC255E256BA3320090DBBA /* UserManager.swift */; };
+		5AFC2564256BC5530090DBBA /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC2563256BC5530090DBBA /* Constant.swift */; };
 		5AFF40322563996900EB9113 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF40312563996900EB9113 /* LoginViewController.swift */; };
 		5AFF403B256399E000EB9113 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFF403A256399E000EB9113 /* Main.storyboard */; };
 		5AFF404125639CD100EB9113 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF404025639CD100EB9113 /* Components.swift */; };
@@ -75,6 +76,7 @@
 		5AFC2554256B6E210090DBBA /* WhoseSameTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoseSameTableCell.swift; sourceTree = "<group>"; };
 		5AFC255A256B9F2B0090DBBA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5AFC255E256BA3320090DBBA /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		5AFC2563256BC5530090DBBA /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		5AFF40312563996900EB9113 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5AFF403A256399E000EB9113 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5AFF404025639CD100EB9113 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			children = (
 				5AAA5B6225636C940004845B /* AppDelegate.swift */,
 				5AAA5B6425636C940004845B /* SceneDelegate.swift */,
+				5AFC2567256BC5600090DBBA /* Constant */,
 				5AE4C08E2566A85B004F0EFC /* Model */,
 				5AFF403D25639A1E00EB9113 /* Controller */,
 				5AAA5B8725636FA90004845B /* View */,
@@ -213,6 +216,14 @@
 				5AFC255E256BA3320090DBBA /* UserManager.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		5AFC2567256BC5600090DBBA /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				5AFC2563256BC5530090DBBA /* Constant.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		5AFF403D25639A1E00EB9113 /* Controller */ = {
@@ -383,6 +394,7 @@
 				5A5F349925679EDC009F8845 /* GuestDetailViewController.swift in Sources */,
 				5AFF404125639CD100EB9113 /* Components.swift in Sources */,
 				5A48ABFD256A72580070CE17 /* GuestTableRecord.swift in Sources */,
+				5AFC2564256BC5530090DBBA /* Constant.swift in Sources */,
 				5AFC255B256B9F2B0090DBBA /* User.swift in Sources */,
 				5AE262B82567977E0084717A /* AddGuestViewController.swift in Sources */,
 				5AFC2555256B6E210090DBBA /* WhoseSameTableCell.swift in Sources */,

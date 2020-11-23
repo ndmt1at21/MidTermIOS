@@ -60,7 +60,7 @@ class GuestLastNameViewController: UIViewController {
     }
     
     @IBAction func alphabetButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "SearchNameToSearchResult", sender: sender)
+        performSegue(withIdentifier: K.segue.searchNameToSearchResult, sender: sender)
     }
     
     @IBAction func homeButtonPressed(_ sender: UIButton) {

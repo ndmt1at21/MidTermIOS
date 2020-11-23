@@ -47,7 +47,7 @@ extension LoginViewController: UITextFieldDelegate {
 extension LoginViewController: UserDelegate {
     func didSignInSuccess(_ userManager: UserManager) {
         DispatchQueue.main.async {
-            self.performSegue(withIdentifier: "LoginToWelcome", sender: self)
+            self.performSegue(withIdentifier: K.segue.loginToWelcome, sender: self)
         }
     }
     

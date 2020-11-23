@@ -38,10 +38,11 @@ class AdminViewController: UIViewController {
         
         let alert = SCLAlertView(appearance: apperance)
         alert.addButton("OK", action: {
-            self.performSegue(withIdentifier: "AdminToCreateEvent", sender: self)
+            self.performSegue(withIdentifier: K.segue
+                                .adminToCreateEvent, sender: self)
         })
         alert.addButton("Cancel", action: {/* Do nothing */})
-        alert.showWarning("", subTitle: "Creating new event will delete all the info from the previous or current event in the app")
+        alert.showWarning("", subTitle: K.subTitleAlertCreateNewEvent)
     }
 
     @IBAction func editButtonPressed(_ sender: UIButton) {

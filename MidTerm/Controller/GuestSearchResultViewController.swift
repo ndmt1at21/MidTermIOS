@@ -24,10 +24,10 @@ class GuestSearchResultViewController: UIViewController {
         searchTitleLabel.font = font.withSize(font.pointSize + 20)
         searchTitleLabel.textColor = userColor
         
-        let nib = UINib(nibName: "SearchNameResultCell", bundle: .main)
+        let nib = UINib(nibName: K.nibName.searchNameResultCell, bundle: .main)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(nib, forCellReuseIdentifier: "ReuseableSearchNameResultCell")
+        tableView.register(nib, forCellReuseIdentifier: K.reuseCellID.searchNameResult)
         
         getGuestData()
     }
@@ -35,14 +35,13 @@ class GuestSearchResultViewController: UIViewController {
     func getGuestData() {
         let realm = try! Realm()
         
-        print(lastNameCharSelected)
         if let guests = realm.objects(EventShow.self).first?.guests {
-            print(guests)
             let guestsWithLastNameSelected = Array(guests).filter{
-                $0.lastName.contains(lastNameCharSelected)
+                $0.lastName.contains(lastNameCharSelected) ||
+                $0.lastName.contains(lastNameCharSelected.lowercased())
             }
+            
             searchData = guestsWithLastNameSelected
-            print(searchData)
             tableView.reloadData()
         }
         
@@ -68,7 +67,8 @@ extension GuestSearchResultViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let guest = searchData[indexPath.row]
-        performSegue(withIdentifier: "SearchResultToDetail", sender: guest)
+        performSegue(withIdentifier: K.segue
+                        .searchResultToDetail, sender: guest)
     }
 }
 
@@ -82,7 +82,7 @@ extension GuestSearchResultViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReuseableSearchNameResultCell", for: indexPath) as! SearchNameResultCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.reuseCellID.searchNameResult, for: indexPath) as! SearchNameResultCell
         
         if indexPath.row % 2 == 1 {
             cell.nameLabel.textColor = UIColor.black

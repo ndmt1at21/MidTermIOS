@@ -30,8 +30,8 @@ class ColorPicker: UIView {
     
     private func configPicker() {
         // Load reuseable cell
-        let nib = UINib(nibName: "ColorPickerCell", bundle: .main)
-        collectionView.register(nib, forCellWithReuseIdentifier: "ReuseableCell")
+        let nib = UINib(nibName: K.nibName.colorPicker, bundle: .main)
+        collectionView.register(nib, forCellWithReuseIdentifier: K.reuseCellID.colorPicker)
         
         // Assign delegate & datasource
         collectionView.delegate = self
@@ -49,7 +49,7 @@ class ColorPicker: UIView {
     
     func showPicker() {
         if self.subviews.isEmpty {
-            guard let view = loadViewFromNib(nibName: "ColorPicker") else {
+            guard let view = loadViewFromNib(nibName: K.nibName.colorPicker) else {
                 return
             }
             configPicker()
@@ -180,7 +180,7 @@ extension ColorPicker: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReuseableCell", for: indexPath) as! ColorPickerCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.reuseCellID.colorPicker, for: indexPath) as! ColorPickerCell
         cell.viewCell.backgroundColor = colors[indexPath.row]
         return cell
     }

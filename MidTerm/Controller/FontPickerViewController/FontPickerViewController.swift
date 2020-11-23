@@ -48,7 +48,7 @@ class FontPicker: UIView {
     
     func showPicker() {
         if self.subviews.isEmpty {
-            guard let view = self.loadViewFromNib(nibName: "FontPicker") else {
+            guard let view = self.loadViewFromNib(nibName: K.nibName.fontPicker) else {
                 return
             }
             

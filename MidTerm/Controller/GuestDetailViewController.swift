@@ -98,7 +98,7 @@ extension GuestDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReuseableWhoseSameTableCell", for: indexPath) as! WhoseSameTableCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.reuseCellID.whoseSameTable, for: indexPath) as! WhoseSameTableCell
         
         let guest = guestsInSameTable[indexPath.row]
         
@@ -117,7 +117,7 @@ extension GuestDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReuseableWhoseSameTableCell") as! WhoseSameTableCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.reuseCellID.whoseSameTable) as! WhoseSameTableCell
         
         let headerTable = ["Guest Names", "Guests"]
         cell.nameLabel.text = headerTable[0]

@@ -23,17 +23,18 @@ class CreateEventViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Delte all in database ----
-        pickerFont.delegate = self
-        pickerColor.delegate = self
-        guestTableRecord.dataSource = self
-
-        guestTableRecord.showTableRecord()
-        
+        // Delete all in database ----
         let realm = try! Realm()
         try! realm.write {
             realm.delete(realm.objects(EventShow.self))
         }
+        
+        pickerFont.delegate = self
+        pickerColor.delegate = self
+        guestTableRecord.dataSource = self
+        
+        eventNameTextField.cornerRadiusAndShadow()
+        guestTableRecord.showTableRecord()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -72,7 +73,7 @@ class CreateEventViewController: UIViewController {
     }
     
     @IBAction func addButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "CreateEventToAddGuest", sender: nil)
+        performSegue(withIdentifier: K.segue.createEventToAddGuest, sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -82,15 +83,15 @@ class CreateEventViewController: UIViewController {
     }
     
     @IBAction func buttonSavePressed(_ sender: UIButton) {
-        UserDefaults.standard.set(slider.value, forKey: "UserFontSize")
-        UserDefaults.standard.set(fontLabel.text, forKey: "UserFontName")
-        UserDefaults.standard.set(colorLabel.backgroundColor, forKey: "UserColor")
+        UserDefaults.standard.set(slider.value, forKey: K.userDefaultKey.userFontSize)
+        UserDefaults.standard.set(fontLabel.text, forKey: K.userDefaultKey.userFontName)
+        UserDefaults.standard.set(colorLabel.backgroundColor, forKey: K.userDefaultKey.userColor)
         
         if eventNameTextField.text?.trimmingCharacters(in: .whitespaces).count == 0 {
             alertError(title: "Error", message: "Event Name cannot empty", toFocus: eventNameTextField, vc: self)
             return
         } else if eventShow.guests.count == 0 {
-            alertError(title: "Error", message: "Avent >= 1 guest", toFocus: nil, vc: self)
+            alertError(title: "Error", message: "Event >= 1 guest", toFocus: nil, vc: self)
             return
         }
         
@@ -100,6 +101,7 @@ class CreateEventViewController: UIViewController {
         try! realm.write {
             realm.add(eventShow)
         }
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func buttonExitPressed(_ sender: UIButton) {

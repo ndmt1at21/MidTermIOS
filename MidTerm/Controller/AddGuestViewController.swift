@@ -59,7 +59,6 @@ class AddGuestViewController: UIViewController {
         guestInfor.sectionID = sectionTextField.text!
         
         delegate?.didSavePressed(self, guestInfo: guestInfor)
-        print(Realm.Configuration.defaultConfiguration.fileURL)
         navigationController?.popViewController(animated: true)
     }
     

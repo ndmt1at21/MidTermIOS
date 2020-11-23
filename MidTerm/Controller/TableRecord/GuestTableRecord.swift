@@ -30,8 +30,8 @@ class GuestTableRecord: UIView {
     }
     
     private func configTableRecord() {
-        let nib = UINib(nibName: "GuestTableRecordCell", bundle: .main)
-        tableView.register(nib, forCellReuseIdentifier: "ReuseableGuestTableRecordCell")
+        let nib = UINib(nibName: K.nibName.guestTableRecordCell, bundle: .main)
+        tableView.register(nib, forCellReuseIdentifier: K.reuseCellID.guestTableRecord)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -39,7 +39,7 @@ class GuestTableRecord: UIView {
     
     func showTableRecord() {
         if self.subviews.isEmpty {
-            guard let view = loadViewFromNib(nibName: "GuestTableRecord") else {
+            guard let view = loadViewFromNib(nibName: K.nibName.guestTableRecord) else {
                 return
             }
             configTableRecord()
@@ -64,7 +64,7 @@ extension GuestTableRecord: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReuseableGuestTableRecordCell", for: indexPath) as! GuestTableRecordCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.reuseCellID.guestTableRecord, for: indexPath) as! GuestTableRecordCell
         
         if let guest = dataSource?.guestTableRecord(self, guestForRow: indexPath.row) {
             cell.label1.text = guest.firstName + ", " + guest.lastName
@@ -77,7 +77,7 @@ extension GuestTableRecord: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReuseableGuestTableRecordCell") as! GuestTableRecordCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.reuseCellID.guestTableRecord) as! GuestTableRecordCell
         
         cell.label1.text = guestTableHeader[0]
         cell.label2.text = guestTableHeader[1]
