@@ -786,6 +786,10 @@ last name initial</string>
                                     <constraint firstAttribute="trailing" secondItem="Gzo-Qj-XVL" secondAttribute="trailing" id="yqg-or-aLA"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7y-ns-CwV" customClass="GuestTableRecord" customModule="MidTerm" customModuleProvider="target">
+                                <rect key="frame" x="20" y="530" width="728" height="394"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Luv-2r-yNp">
                                 <rect key="frame" x="698" y="480" width="50" height="50"/>
                                 <constraints>
@@ -803,12 +807,8 @@ last name initial</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="RB5-zY-1u0" customClass="FontPicker" customModule="MidTerm" customModuleProvider="target">
-                                <rect key="frame" x="40" y="590" width="728" height="256"/>
+                                <rect key="frame" x="20" y="384" width="728" height="256"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7y-ns-CwV" customClass="GuestTableRecord" customModule="MidTerm" customModuleProvider="target">
-                                <rect key="frame" x="20" y="530" width="728" height="394"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zlx-cK-xbw"/>

@@ -30,7 +30,7 @@ class ColorPicker: UIView {
     
     private func configPicker() {
         // Load reuseable cell
-        let nib = UINib(nibName: K.nibName.colorPicker, bundle: .main)
+        let nib = UINib(nibName: K.nibName.colorPickerCell, bundle: .main)
         collectionView.register(nib, forCellWithReuseIdentifier: K.reuseCellID.colorPicker)
         
         // Assign delegate & datasource

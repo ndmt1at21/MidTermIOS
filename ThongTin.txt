@@ -1,0 +1,9 @@
+*** Thông tin sinh viên ***
+Họ tên: Nguyễn Đức Minh Trí
+MSSV: 18120612
+
+*** Điểm mong muốn đạt được ***
+9
+
+*** Link respo github ***
+https://github.com/ndmt1at21/MidTermIOS
