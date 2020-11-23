@@ -130,6 +130,7 @@ extension CreateEventViewController: ColorPickerDelegate {
 // MARK: - AddGuestViewDelegate (get data when added guest infor)
 extension CreateEventViewController: AddGuestViewDelegate {
     func didSavePressed(_ addGuestVC: AddGuestViewController, guestInfo: GuestInfo) {
+        guestInfo.id = eventShow.guests.count
         eventShow.guests.append(guestInfo)
         guestTableRecord.reloadData()
     }

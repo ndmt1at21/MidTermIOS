@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GuessWelcomeViewController: UIViewController {
+class GuestWelcomeViewController: UIViewController {
     
     @IBOutlet weak var guessNameLabel: UILabel!
     @IBOutlet weak var guessImg: UIImageView!
@@ -20,14 +20,12 @@ class GuessWelcomeViewController: UIViewController {
     
     func setupUI() {
         let (font, userColor) = getUserSetting()
-        UILabel.appearance().font = font
-        UILabel.appearance().textColor = userColor
-        UIButton.appearance().titleLabel?.font = font
-        UIButton.appearance().tintColor = userColor
-        UIButton.appearance().setTitleColor(userColor, for: .normal)
         
-        guessNameLabel.font = font.withSize(font.pointSize + 70)
-        findTableButton.titleLabel?.font = font.withSize(font.pointSize + 30)
+        guessNameLabel.font = font.withSize(80)
+        guessNameLabel.textColor = userColor
+
+        findTableButton.titleLabel?.font = font.withSize(50)
+        findTableButton.setTitleColor(userColor, for: .normal)
         findTableButton.titleLabel?.textAlignment = .center
         findTableButton.layer.cornerRadius = findTableButton.frame.height / 2
     }

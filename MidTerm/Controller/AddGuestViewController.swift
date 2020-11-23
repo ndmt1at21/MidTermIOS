@@ -44,11 +44,13 @@ class AddGuestViewController: UIViewController {
     
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
-        checkForError(currentTextField: firstNameTextField)
-        checkForError(currentTextField: lastNameTextField)
-        checkForError(currentTextField: guestTextField)
-        checkForError(currentTextField: tableTextField)
-        checkForError(currentTextField: sectionTextField)
+        if checkForError(currentTextField: firstNameTextField) ||
+            checkForError(currentTextField: lastNameTextField) ||
+            checkForError(currentTextField: guestTextField) ||
+            checkForError(currentTextField: tableTextField) ||
+            checkForError(currentTextField: sectionTextField) {
+            return
+        }
         
         guestInfor.firstName = firstNameTextField.text!
         guestInfor.lastName = lastNameTextField.text!
@@ -59,7 +61,6 @@ class AddGuestViewController: UIViewController {
         delegate?.didSavePressed(self, guestInfo: guestInfor)
         print(Realm.Configuration.defaultConfiguration.fileURL)
         navigationController?.popViewController(animated: true)
-        
     }
     
     @IBAction func exitButtonPressed(_ sender: UIButton) {
@@ -73,7 +74,7 @@ extension AddGuestViewController: UITextFieldDelegate {
         return true
     }
     
-    func checkForError(currentTextField: UITextField) {
+    func checkForError(currentTextField: UITextField) -> Bool {
         if let text = currentTextField.text {
             if text.trimmingCharacters(in: .whitespaces).count == 0 {
                 alertError(
@@ -82,7 +83,9 @@ extension AddGuestViewController: UITextFieldDelegate {
                     toFocus: currentTextField,
                     vc: self
                 )
+                return true
             }
         }
+        return false
     }
 }

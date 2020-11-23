@@ -24,7 +24,8 @@ extension UITextField {
     
     func cornerRadiusAndShadow() {
         self.border(0, .none, UIColor("#000", 0.1).cgColor)
-        self.shadow(0, 0, 10, UIColor("#000", 0.2).cgColor)
+        print("dfhjdfh")
+        self.shadow(0, 0, 10, UIColor("#000000", 0.2).cgColor)
         self.layer.cornerRadius = self.frame.height / 4
     }
 }
@@ -93,8 +94,9 @@ extension UIView {
         gradientLayer.colors = colors
         gradientLayer.startPoint = startPoint
         gradientLayer.endPoint = endPoint
+
+        self.layer.insertSublayer(gradientLayer, at: 0)
         
-        self.layer.addSublayer(gradientLayer)
     }
 }
 

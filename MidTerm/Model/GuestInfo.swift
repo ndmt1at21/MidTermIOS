@@ -9,6 +9,7 @@ import Foundation
 import RealmSwift
 
 class GuestInfo: Object {
+    @objc dynamic var id = 0
     @objc dynamic var firstName = ""
     @objc dynamic var lastName = ""
     @objc dynamic var nGuest = 0

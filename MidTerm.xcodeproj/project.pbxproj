@@ -13,6 +13,8 @@
 		5A48AC09256A72A60070CE17 /* GuestTableRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A48AC07256A72A60070CE17 /* GuestTableRecordCell.swift */; };
 		5A48AC0A256A72A60070CE17 /* GuestTableRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A48AC08256A72A60070CE17 /* GuestTableRecordCell.xib */; };
 		5A48AC10256AA2D70070CE17 /* EventShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A48AC0F256AA2D70070CE17 /* EventShow.swift */; };
+		5A48AC2A256AC9BF0070CE17 /* SearchNameResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A48AC28256AC9BF0070CE17 /* SearchNameResultCell.swift */; };
+		5A48AC2B256AC9BF0070CE17 /* SearchNameResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A48AC29256AC9BF0070CE17 /* SearchNameResultCell.xib */; };
 		5A5F349925679EDC009F8845 /* GuestDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5F349825679EDC009F8845 /* GuestDetailViewController.swift */; };
 		5A5F34A52567C404009F8845 /* GuestInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5F34A42567C404009F8845 /* GuestInfo.swift */; };
 		5A762C9C2566B76B00FE9B58 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 5A762C9B2566B76B00FE9B58 /* Realm */; };
@@ -24,17 +26,20 @@
 		5AAA5B6725636C940004845B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAA5B6625636C940004845B /* WelcomeViewController.swift */; };
 		5AAA5B6C25636C950004845B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AAA5B6B25636C950004845B /* Assets.xcassets */; };
 		5AAA5B6F25636C950004845B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AAA5B6D25636C950004845B /* LaunchScreen.storyboard */; };
-		5AE262B425674E3F0084717A /* GuessLastNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE262B325674E3F0084717A /* GuessLastNameViewController.swift */; };
+		5AE262B425674E3F0084717A /* GuestLastNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE262B325674E3F0084717A /* GuestLastNameViewController.swift */; };
 		5AE262B82567977E0084717A /* AddGuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE262B72567977E0084717A /* AddGuestViewController.swift */; };
-		5AE262BC25679AD50084717A /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE262BB25679AD50084717A /* SearchResultViewController.swift */; };
+		5AE262BC25679AD50084717A /* GuestSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE262BB25679AD50084717A /* GuestSearchResultViewController.swift */; };
 		5AE4C084256637E9004F0EFC /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE4C083256637E9004F0EFC /* ColorPicker.swift */; };
 		5AE4C087256637F9004F0EFC /* ColorPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AE4C086256637F9004F0EFC /* ColorPicker.xib */; };
 		5AE4C08B25663C5C004F0EFC /* ColorPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE4C08925663C5C004F0EFC /* ColorPickerCell.swift */; };
 		5AE4C08C25663C5C004F0EFC /* ColorPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AE4C08A25663C5C004F0EFC /* ColorPickerCell.xib */; };
+		5AFC2555256B6E210090DBBA /* WhoseSameTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC2554256B6E210090DBBA /* WhoseSameTableCell.swift */; };
+		5AFC255B256B9F2B0090DBBA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC255A256B9F2B0090DBBA /* User.swift */; };
+		5AFC255F256BA3320090DBBA /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC255E256BA3320090DBBA /* UserManager.swift */; };
 		5AFF40322563996900EB9113 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF40312563996900EB9113 /* LoginViewController.swift */; };
 		5AFF403B256399E000EB9113 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFF403A256399E000EB9113 /* Main.storyboard */; };
 		5AFF404125639CD100EB9113 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF404025639CD100EB9113 /* Components.swift */; };
-		5AFF40452563CC2100EB9113 /* GuessWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF40442563CC2100EB9113 /* GuessWelcomeViewController.swift */; };
+		5AFF40452563CC2100EB9113 /* GuestWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF40442563CC2100EB9113 /* GuestWelcomeViewController.swift */; };
 		5AFF40482563CC7300EB9113 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF40472563CC7300EB9113 /* AdminViewController.swift */; };
 		5AFF404B2563D9D500EB9113 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF404A2563D9D500EB9113 /* CreateEventViewController.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +52,8 @@
 		5A48AC07256A72A60070CE17 /* GuestTableRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestTableRecordCell.swift; sourceTree = "<group>"; };
 		5A48AC08256A72A60070CE17 /* GuestTableRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuestTableRecordCell.xib; sourceTree = "<group>"; };
 		5A48AC0F256AA2D70070CE17 /* EventShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventShow.swift; sourceTree = "<group>"; };
+		5A48AC28256AC9BF0070CE17 /* SearchNameResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNameResultCell.swift; sourceTree = "<group>"; };
+		5A48AC29256AC9BF0070CE17 /* SearchNameResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchNameResultCell.xib; sourceTree = "<group>"; };
 		5A5F349825679EDC009F8845 /* GuestDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDetailViewController.swift; sourceTree = "<group>"; };
 		5A5F34A42567C404009F8845 /* GuestInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestInfo.swift; sourceTree = "<group>"; };
 		5A7DC80225652D9D007EB493 /* FontPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontPickerViewController.swift; sourceTree = "<group>"; };
@@ -58,17 +65,20 @@
 		5AAA5B6B25636C950004845B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AAA5B6E25636C950004845B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AAA5B7025636C950004845B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5AE262B325674E3F0084717A /* GuessLastNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessLastNameViewController.swift; sourceTree = "<group>"; };
+		5AE262B325674E3F0084717A /* GuestLastNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestLastNameViewController.swift; sourceTree = "<group>"; };
 		5AE262B72567977E0084717A /* AddGuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGuestViewController.swift; sourceTree = "<group>"; };
-		5AE262BB25679AD50084717A /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		5AE262BB25679AD50084717A /* GuestSearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestSearchResultViewController.swift; sourceTree = "<group>"; };
 		5AE4C083256637E9004F0EFC /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 		5AE4C086256637F9004F0EFC /* ColorPicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorPicker.xib; sourceTree = "<group>"; };
 		5AE4C08925663C5C004F0EFC /* ColorPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerCell.swift; sourceTree = "<group>"; };
 		5AE4C08A25663C5C004F0EFC /* ColorPickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorPickerCell.xib; sourceTree = "<group>"; };
+		5AFC2554256B6E210090DBBA /* WhoseSameTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoseSameTableCell.swift; sourceTree = "<group>"; };
+		5AFC255A256B9F2B0090DBBA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5AFC255E256BA3320090DBBA /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		5AFF40312563996900EB9113 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5AFF403A256399E000EB9113 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5AFF404025639CD100EB9113 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
-		5AFF40442563CC2100EB9113 /* GuessWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessWelcomeViewController.swift; sourceTree = "<group>"; };
+		5AFF40442563CC2100EB9113 /* GuestWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestWelcomeViewController.swift; sourceTree = "<group>"; };
 		5AFF40472563CC7300EB9113 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		5AFF404A2563D9D500EB9113 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		66A4DAFA5EAA3C8FC7828D7E /* Pods_MidTerm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MidTerm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +124,15 @@
 				5AE4C08A25663C5C004F0EFC /* ColorPickerCell.xib */,
 			);
 			path = ColorPickerViewController;
+			sourceTree = "<group>";
+		};
+		5A48AC17256ABF360070CE17 /* SearchNameCell */ = {
+			isa = PBXGroup;
+			children = (
+				5A48AC28256AC9BF0070CE17 /* SearchNameResultCell.swift */,
+				5A48AC29256AC9BF0070CE17 /* SearchNameResultCell.xib */,
+			);
+			path = SearchNameCell;
 			sourceTree = "<group>";
 		};
 		5A67FDD125681F62009AA906 /* TableRecord */ = {
@@ -172,24 +191,44 @@
 		5AE4C08E2566A85B004F0EFC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5AFC255D256BA31E0090DBBA /* User */,
 				5A5F34A42567C404009F8845 /* GuestInfo.swift */,
 				5A48AC0F256AA2D70070CE17 /* EventShow.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
+		5AFC2557256B6E250090DBBA /* WhoseSameTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				5AFC2554256B6E210090DBBA /* WhoseSameTableCell.swift */,
+			);
+			path = WhoseSameTableCell;
+			sourceTree = "<group>";
+		};
+		5AFC255D256BA31E0090DBBA /* User */ = {
+			isa = PBXGroup;
+			children = (
+				5AFC255A256B9F2B0090DBBA /* User.swift */,
+				5AFC255E256BA3320090DBBA /* UserManager.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		5AFF403D25639A1E00EB9113 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5AAA5B6625636C940004845B /* WelcomeViewController.swift */,
 				5AFF40312563996900EB9113 /* LoginViewController.swift */,
+				5AAA5B6625636C940004845B /* WelcomeViewController.swift */,
 				5AFF40472563CC7300EB9113 /* AdminViewController.swift */,
 				5AFF404A2563D9D500EB9113 /* CreateEventViewController.swift */,
 				5AE262B72567977E0084717A /* AddGuestViewController.swift */,
-				5AE262BB25679AD50084717A /* SearchResultViewController.swift */,
-				5AFF40442563CC2100EB9113 /* GuessWelcomeViewController.swift */,
-				5AE262B325674E3F0084717A /* GuessLastNameViewController.swift */,
+				5AFF40442563CC2100EB9113 /* GuestWelcomeViewController.swift */,
+				5AE262B325674E3F0084717A /* GuestLastNameViewController.swift */,
+				5AE262BB25679AD50084717A /* GuestSearchResultViewController.swift */,
 				5A5F349825679EDC009F8845 /* GuestDetailViewController.swift */,
+				5AFC2557256B6E250090DBBA /* WhoseSameTableCell */,
+				5A48AC17256ABF360070CE17 /* SearchNameCell */,
 				5A67FDD125681F62009AA906 /* TableRecord */,
 				5A15924A256600DE00857FD2 /* ColorPickerViewController */,
 				5A1592472566008D00857FD2 /* FontPickerViewController */,
@@ -276,6 +315,7 @@
 				5AAA5B6F25636C950004845B /* LaunchScreen.storyboard in Resources */,
 				5AAA5B6C25636C950004845B /* Assets.xcassets in Resources */,
 				5A48AC0A256A72A60070CE17 /* GuestTableRecordCell.xib in Resources */,
+				5A48AC2B256AC9BF0070CE17 /* SearchNameResultCell.xib in Resources */,
 				5AE4C087256637F9004F0EFC /* ColorPicker.xib in Resources */,
 				5AFF403B256399E000EB9113 /* Main.storyboard in Resources */,
 				5A48AC01256A72640070CE17 /* GuestTableRecord.xib in Resources */,
@@ -332,25 +372,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AFF40452563CC2100EB9113 /* GuessWelcomeViewController.swift in Sources */,
+				5AFF40452563CC2100EB9113 /* GuestWelcomeViewController.swift in Sources */,
 				5AFF40322563996900EB9113 /* LoginViewController.swift in Sources */,
 				5AAA5B6725636C940004845B /* WelcomeViewController.swift in Sources */,
 				5A48AC09256A72A60070CE17 /* GuestTableRecordCell.swift in Sources */,
 				5A5F34A52567C404009F8845 /* GuestInfo.swift in Sources */,
 				5AE4C08B25663C5C004F0EFC /* ColorPickerCell.swift in Sources */,
 				5A48AC10256AA2D70070CE17 /* EventShow.swift in Sources */,
+				5AFC255F256BA3320090DBBA /* UserManager.swift in Sources */,
 				5A5F349925679EDC009F8845 /* GuestDetailViewController.swift in Sources */,
 				5AFF404125639CD100EB9113 /* Components.swift in Sources */,
 				5A48ABFD256A72580070CE17 /* GuestTableRecord.swift in Sources */,
+				5AFC255B256B9F2B0090DBBA /* User.swift in Sources */,
 				5AE262B82567977E0084717A /* AddGuestViewController.swift in Sources */,
+				5AFC2555256B6E210090DBBA /* WhoseSameTableCell.swift in Sources */,
 				5AFF40482563CC7300EB9113 /* AdminViewController.swift in Sources */,
-				5AE262BC25679AD50084717A /* SearchResultViewController.swift in Sources */,
+				5AE262BC25679AD50084717A /* GuestSearchResultViewController.swift in Sources */,
 				5AAA5B6325636C940004845B /* AppDelegate.swift in Sources */,
 				5AAA5B6525636C940004845B /* SceneDelegate.swift in Sources */,
-				5AE262B425674E3F0084717A /* GuessLastNameViewController.swift in Sources */,
+				5AE262B425674E3F0084717A /* GuestLastNameViewController.swift in Sources */,
 				5AE4C084256637E9004F0EFC /* ColorPicker.swift in Sources */,
 				5AFF404B2563D9D500EB9113 /* CreateEventViewController.swift in Sources */,
 				5A7DC80325652D9D007EB493 /* FontPickerViewController.swift in Sources */,
+				5A48AC2A256AC9BF0070CE17 /* SearchNameResultCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
